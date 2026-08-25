@@ -16,7 +16,6 @@ export const pillarsData: MissionPillar[] = [
   {
     id: 'no-hunger',
     title: 'Zero Hunger & Food Distribution',
-    tamilTitle: 'பசி இல்லா உலகம்',
     tagline: '',
     description: 'The Food Donation Drive of Hands for Homeless (HFH) is one of the organisation’s foundational initiatives, focused on providing nutritious food and basic support to people experiencing homelessness and food insecurity.The initiative began with the simple belief that no one should have to sleep hungry. HFH volunteers collect, prepare, and distribute food to people in need, particularly those living on the streets and in underserved communities.',
     iconName: 'Utensils',
@@ -27,7 +26,6 @@ export const pillarsData: MissionPillar[] = [
   {
     id: 'education',
     title: 'Karpi',
-    tamilTitle: 'கல்வி அதிகாரம்',
     tagline: '',
     description: 'Karppi (கற்பி) is an educational awareness initiative you were developing through Hands for Homeless, aimed at children and communities who have limited access to education or awareness about educational opportunities.The core idea is: education should be seen not just as a privilege, but as a basic pathway to a better future.',
     iconName: 'GraduationCap',
@@ -38,7 +36,6 @@ export const pillarsData: MissionPillar[] = [
   {
     id: 'women-empowerment',
     title: 'Kalaikural',
-    tamilTitle: 'பயிற்சி வகுப்பு',
     tagline: '',
     description: 'Kalaikural (கலைக்குரல்) is an art-based social initiative/event focused on underprivileged and underserved children, using art as a way to give them learning opportunities, confidence, creativity, and a platform to express themselves.',
     iconName: 'Sparkles',
@@ -49,7 +46,6 @@ export const pillarsData: MissionPillar[] = [
   {
     id: 'animal-activism',
     title: 'Animal Welfare & Rescue',
-    tamilTitle: 'விலங்கு பாதுகாப்பு',
     tagline: '',
     description: 'Stray dogs, cattle, and injured animals deserve empathy. HFH runs daily stray feeding drives, emergency injury treatments, and rabies vaccination awareness camps.',
     iconName: 'Dog',
