@@ -36,7 +36,7 @@ export const pillarsData: MissionPillar[] = [
   {
     id: 'women-empowerment',
     title: 'Kalaikural',
-    
+    tagline: '',
     description: 'Kalaikural (கலைக்குரல்) is an art-based social initiative/event focused on underprivileged and underserved children, using art as a way to give them learning opportunities, confidence, creativity, and a platform to express themselves.',
     iconName: 'Sparkles',
     stats: '',
