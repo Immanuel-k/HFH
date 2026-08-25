@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-400">
               <li><a href="#about" onClick={(e) => { e.preventDefault(); handleNavClick('#about'); }} className="hover:text-red-400 transition-colors">About HFH & Mission</a></li>
-              <li><a href="#pillars" onClick={(e) => { e.preventDefault(); handleNavClick('#pillars'); }} className="hover:text-red-400 transition-colors">Our 6 Core Mission Pillars</a></li>
+              <li><a href="#pillars" onClick={(e) => { e.preventDefault(); handleNavClick('#pillars'); }} className="hover:text-red-400 transition-colors">Our 4 Core Mission Pillars</a></li>
               <li><a href="#gallery" onClick={(e) => { e.preventDefault(); handleNavClick('#gallery'); }} className="hover:text-red-400 transition-colors">Ground Reality Gallery</a></li>
               <li><a href="#contact" onClick={(e) => { e.preventDefault(); handleNavClick('#contact'); }} className="hover:text-red-400 transition-colors">Direct Contact & Helpline</a></li>
             </ul>
