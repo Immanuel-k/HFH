@@ -103,7 +103,7 @@ export const PillarsGrid: React.FC = () => {
             Social Transformation in <span className="text-red-500">Tamil Nadu</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            From daily food distribution to Karpi education, Kalaikural art drives, and stray animal welfare, explore how Hands for Homeless makes a direct impact.
+            From food distribution to Karpi education, Kalaikural art drives, and stray animal welfare, explore how Hands for Homeless makes a direct impact.
           </p>
         </div>
 
