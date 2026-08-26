@@ -46,6 +46,7 @@ export const pillarsData: MissionPillar[] = [
   {
     id: 'animal-activism',
     title: 'Animal Welfare & Rescue',
+
     tagline: '',
     description: 'Stray dogs, cattle, and injured animals deserve empathy. HFH runs daily stray feeding drives, emergency injury treatments, and rabies vaccination awareness camps.',
     iconName: 'Dog',
