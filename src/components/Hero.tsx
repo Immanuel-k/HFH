@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Shield, Users, ArrowRight, Award, MapPin, Mail } from 'lucide-react';
+import { Compass, MapPin, Mail, ArrowRight } from 'lucide-react';
 import { TactileButton } from './TactileButton';
 
 export const Hero: React.FC = () => {
@@ -63,7 +63,7 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* Dual Action CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <TactileButton
             variant="primary"
             size="lg"
@@ -86,49 +86,6 @@ export const Hero: React.FC = () => {
             <Mail className="w-5 h-5 text-red-500" />
             <span>Get in Touch</span>
           </TactileButton>
-        </div>
-
-        {/* Qualitative Highlights */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
-          <div className="glass-panel p-4.5 rounded-2xl border border-slate-800/90 text-left flex items-center space-x-4">
-            <div className="p-3 rounded-xl bg-red-950/80 border border-red-800/50 text-red-400 shrink-0">
-              <Users className="w-6 h-6" />
-            </div>
-            <div>
-              <div className="text-sm font-bold text-white">100% Selfless</div>
-              <div className="text-xs text-slate-400">Independent NGO</div>
-            </div>
-          </div>
-
-          <div className="glass-panel p-4 rounded-2xl border border-slate-800/90 text-left flex items-start space-x-3">
-            <div className="p-2.5 rounded-xl bg-red-950/80 border border-red-800/50 text-red-400">
-              <Award className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-sm font-bold text-white">Zero Overhead</div>
-              <div className="text-xs text-slate-400">Direct Ground Action</div>
-            </div>
-          </div>
-
-          <div className="glass-panel p-4 rounded-2xl border border-slate-800/90 text-left flex items-start space-x-3">
-            <div className="p-2.5 rounded-xl bg-red-950/80 border border-red-800/50 text-red-400">
-              <Users className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-sm font-bold text-white">Youth Driven</div>
-              <div className="text-xs text-slate-400">Grassroots Force</div>
-            </div>
-          </div>
-
-          <div className="glass-panel p-4 rounded-2xl border border-slate-800/90 text-left flex items-start space-x-3">
-            <div className="p-2.5 rounded-xl bg-red-950/80 border border-red-800/50 text-red-400">
-              <Compass className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="text-sm font-bold text-white">Daily Meal Runs</div>
-              <div className="text-xs text-slate-400">Zero Hunger Goal</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
