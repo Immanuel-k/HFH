@@ -107,18 +107,19 @@ export const ContactSection: React.FC = () => {
                   </div>
                 </a>
 
-                <a
-                  href="tel:+919344516020"
-                  className="flex items-center space-x-4 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-600/50 transition-colors group"
-                >
+                <div className="flex items-center space-x-4 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-600/50 transition-colors group">
                   <div className="w-12 h-12 rounded-2xl bg-red-950 border border-red-800 flex items-center justify-center text-red-500 group-hover:bg-red-600 group-hover:text-white transition-colors shrink-0">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-400 uppercase font-bold tracking-wider block">PHONE / CONTACT NUMBER</span>
-                    <span className="text-base font-mono font-bold text-white group-hover:text-red-400 transition-colors whitespace-nowrap">+91 9344516020</span>
+                    <span className="text-xs text-slate-400 uppercase font-bold tracking-wider block">PHONE / CONTACT NUMBERS</span>
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3 text-base font-mono font-bold text-white">
+                      <a href="tel:+919344516020" className="hover:text-red-400 transition-colors whitespace-nowrap">+91 9344516020</a>
+                      <span className="hidden sm:inline text-slate-600">•</span>
+                      <a href="tel:+919043032347" className="hover:text-red-400 transition-colors whitespace-nowrap">+91 9043032347</a>
+                    </div>
                   </div>
-                </a>
+                </div>
 
                 <a
                   href="mailto:handsforhomeless7@gmail.com"

@@ -88,6 +88,11 @@ export const Footer: React.FC = () => {
                 <span>+91 9344516020</span>
               </a>
 
+              <a href="tel:+919043032347" className="flex items-center space-x-2 text-xs font-mono font-bold text-slate-200 hover:text-white whitespace-nowrap">
+                <Phone className="w-3.5 h-3.5 text-red-500 shrink-0" />
+                <span>+91 9043032347</span>
+              </a>
+
               <a href="mailto:handsforhomeless7@gmail.com" className="flex items-center space-x-2 text-xs text-slate-300 hover:text-white">
                 <Mail className="w-3.5 h-3.5 text-red-500 shrink-0" />
                 <span>handsforhomeless7@gmail.com</span>
