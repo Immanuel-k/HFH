@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, MapPin, Mail, ArrowRight } from 'lucide-react';
+import { Compass, MapPin, HeartHandshake, ArrowRight } from 'lucide-react';
 import { TactileButton } from './TactileButton';
 
 export const Hero: React.FC = () => {
@@ -80,11 +80,11 @@ export const Hero: React.FC = () => {
             variant="glass"
             size="lg"
             hapticType="medium"
-            onClick={() => handleScrollTo('#contact')}
+            onClick={() => handleScrollTo('#volunteer')}
             className="w-full sm:w-auto"
           >
-            <Mail className="w-5 h-5 text-red-500" />
-            <span>Get in Touch</span>
+            <HeartHandshake className="w-5 h-5 text-red-500" />
+            <span>Become a Volunteer</span>
           </TactileButton>
         </div>
       </div>
