@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Eye, ShieldCheck, User, CheckCircle2 } from 'lucide-react';
+import { Eye, ShieldCheck, User, CheckCircle2 } from 'lucide-react';
 import { Card3D } from './Card3D';
 
 export const AboutFounder: React.FC = () => {
@@ -97,18 +97,18 @@ export const AboutFounder: React.FC = () => {
 
               {/* Vision & Mission Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-900/50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-red-950 flex items-center justify-center text-red-500 mb-3 border border-red-800/40">
-                    <Target className="w-5 h-5" />
+                <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-900/50 transition-colors flex flex-col justify-start">
+                  <div className="w-10 h-10 rounded-xl overflow-hidden mb-3 border border-red-500/40 shadow-sm shadow-red-950/50 shrink-0">
+                    <img src="/logo.jpg" alt="HFH Mission Icon" className="w-full h-full object-cover" />
                   </div>
                   <h4 className="font-bold text-white text-base mb-1">Our Mission</h4>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    Eradicate hunger, offer free remedial tutoring to underprivileged children, provide skill development for women, and rescue stray animals across Ramanathapuram.
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Our mission is to provide food and essential support to homeless people while creating a more inclusive and compassionate society through charity initiatives, stereotype-breaking awareness campaigns, legal aid awareness, menstrual hygiene education, and other community-driven projects. We aim to expand our initiatives continuously to address evolving social needs and create lasting change.
                   </p>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-900/50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-red-950 flex items-center justify-center text-red-500 mb-3 border border-red-800/40">
+                <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-900/50 transition-colors flex flex-col justify-start">
+                  <div className="w-10 h-10 rounded-xl bg-red-950 flex items-center justify-center text-red-500 mb-3 border border-red-800/40 shrink-0">
                     <Eye className="w-5 h-5" />
                   </div>
                   <h4 className="font-bold text-white text-base mb-1">Our Vision</h4>
