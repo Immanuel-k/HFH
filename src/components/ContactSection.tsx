@@ -1,66 +1,8 @@
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Send, Loader2, CheckCircle2, MessageCircle } from 'lucide-react';
-import { apiService } from '../services/api';
-import { ContactMessage } from '../types';
+import React from 'react';
+import { Phone, Mail, MapPin, MessageCircle, ExternalLink, FileText } from 'lucide-react';
 import { Card3D } from './Card3D';
-import { TactileButton } from './TactileButton';
 
 export const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState<ContactMessage>({
-    name: '',
-    email: '',
-    phone: '',
-    subject: 'General Inquiry',
-    message: ''
-  });
-
-  const [loading, setLoading] = useState(false);
-  const [successMsg, setSuccessMsg] = useState('');
-  const [errorMsg, setErrorMsg] = useState('');
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setSuccessMsg('');
-    setErrorMsg('');
-
-    try {
-      // 1. Submit via apiService (FormSubmit email to handsforhomeless7@gmail.com + mailto)
-      const res = await apiService.sendContactMessage(formData);
-      setSuccessMsg(res.message);
-
-      // 2. Format pre-filled WhatsApp dispatch to +91 9344516020
-      const waText = encodeURIComponent(
-        `*NEW WEBSITE INQUIRY - HFH*\n` +
-        `----------------------------------\n` +
-        `*Name:* ${formData.name}\n` +
-        `*Email:* ${formData.email}\n` +
-        `*Phone:* ${formData.phone || 'N/A'}\n` +
-        `*Subject:* ${formData.subject || 'General Inquiry'}\n` +
-        `*Message:* ${formData.message}\n` +
-        `----------------------------------`
-      );
-      const waUrl = `https://wa.me/919344516020?text=${waText}`;
-
-      // Automatically launch WhatsApp with prefilled message
-      setTimeout(() => {
-        window.open(waUrl, '_blank');
-      }, 700);
-
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: 'General Inquiry',
-        message: ''
-      });
-    } catch (err: any) {
-      setErrorMsg(err.message || 'Failed to send message.');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <section id="contact" className="py-24 relative z-10 bg-[#07070a]/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,13 +10,13 @@ export const ContactSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center space-x-2 bg-red-950/80 border border-red-800/60 px-3.5 py-1.5 rounded-full text-red-400 text-xs font-semibold uppercase tracking-wider mb-4">
             <Mail className="w-3.5 h-3.5" />
-            <span>Direct Outreach & Contact</span>
+            <span>Direct Outreach & Registration</span>
           </div>
           <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
             Get in Touch with <span className="text-red-500">HFH</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            Reach out via direct WhatsApp (+91 9344516020) or email (handsforhomeless7@gmail.com) for food drives, tuition centers, or animal welfare support.
+            Reach out via direct WhatsApp (+91 9344516020), call us, or complete our official registration form below.
           </p>
         </div>
 
@@ -148,120 +90,55 @@ export const ContactSection: React.FC = () => {
             </Card3D>
           </div>
 
-          {/* Contact Message Form */}
+          {/* Google Form Section */}
           <div className="lg:col-span-7">
-            <div className="glass-panel p-8 rounded-3xl border border-slate-800">
-              <h3 className="font-heading font-bold text-2xl text-white mb-1">Send us a Message</h3>
-              <p className="text-xs text-slate-400 mb-6">
-                Submitting this form sends your message directly to <strong className="text-red-400">handsforhomeless7@gmail.com</strong> and opens WhatsApp to <strong className="text-emerald-400">+91 9344516020</strong>.
-              </p>
-
-              {successMsg && (
-                <div className="mb-6 p-4 rounded-2xl bg-emerald-950/80 border border-emerald-600 text-emerald-200 text-xs sm:text-sm flex items-start space-x-3 shadow-lg">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
-                  <div>
-                    <span className="font-bold block text-white mb-0.5">Message Sent Successfully!</span>
-                    <span>{successMsg}</span>
-                  </div>
-                </div>
-              )}
-
-              {errorMsg && (
-                <div className="mb-6 p-4 rounded-2xl bg-red-950/80 border border-red-800 text-red-300 text-xs sm:text-sm">
-                  {errorMsg}
-                </div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                      YOUR NAME *
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Sundar"
-                      value={formData.name}
-                      onChange={e => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-red-500 transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                      EMAIL ADDRESS *
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="sundar@example.com"
-                      value={formData.email}
-                      onChange={e => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-red-500 transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                      PHONE NUMBER
-                    </label>
-                    <input
-                      type="tel"
-                      placeholder="+91 9344516020"
-                      value={formData.phone}
-                      onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-red-500 transition-colors"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                      SUBJECT
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="General Inquiry"
-                      value={formData.subject}
-                      onChange={e => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full px-4 py-3 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-red-500 transition-colors"
-                    />
-                  </div>
-                </div>
-
+            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
                 <div>
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">
-                    MESSAGE *
-                  </label>
-                  <textarea
-                    rows={4}
-                    required
-                    placeholder="Write your message or inquiry here..."
-                    value={formData.message}
-                    onChange={e => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-2xl bg-slate-950/80 border border-slate-800 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-red-500 transition-colors"
-                  ></textarea>
+                  <div className="flex items-center space-x-2">
+                    <FileText className="w-5 h-5 text-red-500" />
+                    <h3 className="font-heading font-bold text-2xl text-white">Official Registration Form</h3>
+                  </div>
+                  <p className="text-xs text-slate-400 mt-1">
+                    Fill out our official Google Form to register with Hands for Homeless (HFH).
+                  </p>
                 </div>
 
-                <TactileButton
-                  type="submit"
-                  variant="primary"
-                  size="lg"
-                  disabled={loading}
-                  className="w-full justify-center"
+                <a
+                  href="https://forms.gle/AwdwARnoahwfyHgS6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider transition-all shrink-0 shadow-lg shadow-red-900/30 hover:scale-[1.02]"
                 >
-                  {loading ? (
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      <span>Send Direct Message (Gmail & WhatsApp)</span>
-                    </>
-                  )}
-                </TactileButton>
-              </form>
+                  <span>Open Full Form</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+
+              {/* Responsive Embedded Iframe */}
+              <div className="w-full rounded-2xl overflow-hidden border border-slate-800 bg-white shadow-xl min-h-[640px]">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSdU9cafHVeuaCh1AxhQ8JIzaZBDCwxdeSgbgx4s1bpFZuEtsg/viewform?embedded=true"
+                  width="100%"
+                  height="660"
+                  className="w-full border-0 block"
+                  title="HFH Registration Form"
+                >
+                  Loading Volunteers Registration Form…
+                </iframe>
+              </div>
+
+              <div className="text-center pt-1">
+                <a
+                  href="https://forms.gle/AwdwARnoahwfyHgS6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-slate-400 hover:text-red-400 transition-colors inline-flex items-center space-x-1"
+                >
+                  <span>Trouble viewing the form? Click here to open it directly in a new tab</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
