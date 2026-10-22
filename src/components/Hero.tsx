@@ -80,7 +80,7 @@ export const Hero: React.FC = () => {
             variant="glass"
             size="lg"
             hapticType="medium"
-            onClick={() => handleScrollTo('#volunteer')}
+            onClick={() => window.open('https://forms.gle/AwdwARnoahwfyHgS6', '_blank')}
             className="w-full sm:w-auto"
           >
             <HeartHandshake className="w-5 h-5 text-red-500" />

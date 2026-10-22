@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, MessageCircle, ExternalLink, FileText } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, ExternalLink, Users } from 'lucide-react';
 import { Card3D } from './Card3D';
 
 export const ContactSection: React.FC = () => {
@@ -10,13 +10,13 @@ export const ContactSection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center space-x-2 bg-red-950/80 border border-red-800/60 px-3.5 py-1.5 rounded-full text-red-400 text-xs font-semibold uppercase tracking-wider mb-4">
             <Mail className="w-3.5 h-3.5" />
-            <span>Direct Outreach & Registration</span>
+            <span>Direct Outreach & Contact</span>
           </div>
           <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
             Get in Touch with <span className="text-red-500">HFH</span>
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-300">
-            Reach out via direct WhatsApp (+91 9344516020), call us, or complete our official registration form below.
+            Reach out via direct WhatsApp (+91 9344516020), call us, or connect with our leadership team.
           </p>
         </div>
 
@@ -90,54 +90,56 @@ export const ContactSection: React.FC = () => {
             </Card3D>
           </div>
 
-          {/* Google Form Section */}
+          {/* Meet Our Founders & Google Form Redirect */}
           <div className="lg:col-span-7">
-            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-4">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-                <div>
-                  <div className="flex items-center space-x-2">
-                    <FileText className="w-5 h-5 text-red-500" />
-                    <h3 className="font-heading font-bold text-2xl text-white">Official Registration Form</h3>
-                  </div>
-                  <p className="text-xs text-slate-400 mt-1">
-                    Fill out our official Google Form to register with Hands for Homeless (HFH).
-                  </p>
+            <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-slate-800 space-y-6">
+              <div className="border-b border-slate-800 pb-5">
+                <div className="inline-flex items-center space-x-2 bg-red-950/80 border border-red-800/60 px-3 py-1 rounded-full text-red-400 text-xs font-semibold uppercase tracking-wider mb-3">
+                  <Users className="w-3.5 h-3.5" />
+                  <span>Leadership</span>
+                </div>
+                <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white">
+                  Meet our founders
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-400 mt-1">
+                  Dedicated grassroots leadership turning empathy into concrete action across Ramanathapuram.
+                </p>
+              </div>
+
+              {/* Founders Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800/90 hover:border-red-600/40 transition-colors">
+                  <span className="text-[11px] font-bold text-red-400 uppercase tracking-widest block mb-1">FOUNDER</span>
+                  <h4 className="text-xl font-bold text-white">Tamiliniyan</h4>
+                  <p className="text-xs text-slate-400 mt-1">Hands for Homeless (HFH)</p>
                 </div>
 
-                <a
-                  href="https://forms.gle/AwdwARnoahwfyHgS6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider transition-all shrink-0 shadow-lg shadow-red-900/30 hover:scale-[1.02]"
-                >
-                  <span>Open Full Form</span>
-                  <ExternalLink className="w-3.5 h-3.5" />
-                </a>
+                <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800/90 hover:border-red-600/40 transition-colors">
+                  <span className="text-[11px] font-bold text-red-400 uppercase tracking-widest block mb-1">CO-FOUNDER</span>
+                  <h4 className="text-xl font-bold text-white">Prasanna</h4>
+                  <p className="text-xs text-slate-400 mt-1">Hands for Homeless (HFH)</p>
+                </div>
               </div>
 
-              {/* Responsive Embedded Iframe */}
-              <div className="w-full rounded-2xl overflow-hidden border border-slate-800 bg-white shadow-xl min-h-[640px]">
-                <iframe
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSdU9cafHVeuaCh1AxhQ8JIzaZBDCwxdeSgbgx4s1bpFZuEtsg/viewform?embedded=true"
-                  width="100%"
-                  height="660"
-                  className="w-full border-0 block"
-                  title="HFH Registration Form"
-                >
-                  Loading Volunteers Registration Form…
-                </iframe>
-              </div>
-
-              <div className="text-center pt-1">
-                <a
-                  href="https://forms.gle/AwdwARnoahwfyHgS6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-slate-400 hover:text-red-400 transition-colors inline-flex items-center space-x-1"
-                >
-                  <span>Trouble viewing the form? Click here to open it directly in a new tab</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
+              {/* Redirect to Google Form in New Tab */}
+              <div className="pt-2">
+                <div className="p-5 rounded-2xl bg-gradient-to-r from-red-950/60 via-slate-950/80 to-slate-950 border border-red-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div>
+                    <h5 className="font-bold text-white text-sm">Join as a Volunteer</h5>
+                    <p className="text-xs text-slate-300 mt-0.5">
+                      Ready to make a difference? Fill out our official Google Form.
+                    </p>
+                  </div>
+                  <a
+                    href="https://forms.gle/AwdwARnoahwfyHgS6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider transition-all shrink-0 shadow-lg shadow-red-950/50 hover:scale-[1.02]"
+                  >
+                    <span>Open Registration Form</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
