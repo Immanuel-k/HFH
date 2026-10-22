@@ -22,11 +22,11 @@ export const VolunteerForm: React.FC = () => {
 
   const skillOptions = [
     'Food Prep & Distribution',
-    'Evening Teaching / Tutoring',
+    'Karpi Learning Support',
     'Stray Animal Feeding & Care',
-    'Women Tailoring Mentorship',
+    'Kalaikural Art & Skill Drive',
     'Social Media & Photography',
-    'Medical & Eye Camp Support'
+    'Community Welfare Support'
   ];
 
   const handleSkillToggle = (skill: string) => {
@@ -109,7 +109,7 @@ export const VolunteerForm: React.FC = () => {
             </h2>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Hands for Homeless is powered 100% by passionate students, youth, and local citizens of Ramanathapuram. Join our daily night food distribution runs, evening tuition centers, or animal rescue drives.
+              Hands for Homeless is powered 100% by passionate students, youth, and local citizens of Ramanathapuram. Join our food distribution runs, Karpi learning sessions, or animal rescue drives.
             </p>
 
             <div className="space-y-3 pt-2">

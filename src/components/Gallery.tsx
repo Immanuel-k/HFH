@@ -20,7 +20,7 @@ export const galleryItems: StoryGalleryItem[] = [
     location: '',
     date: '',
     image: '/education.jpg',
-    description: 'Volunteer teachers providing free tuition, school bags, and study project guidance to underprivileged rural students.'
+    description: 'Volunteer teachers providing study kits and project guidance to underprivileged rural students.'
   },
   {
     id: 'g3',
