@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, MessageCircle, ExternalLink, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, Users } from 'lucide-react';
 import { Card3D } from './Card3D';
 
 export const ContactSection: React.FC = () => {
@@ -101,9 +101,6 @@ export const ContactSection: React.FC = () => {
                 <h3 className="font-heading font-bold text-2xl sm:text-3xl text-white">
                   Meet our founders
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                  Dedicated grassroots leadership turning empathy into concrete action across Ramanathapuram.
-                </p>
               </div>
 
               {/* Founders Cards */}
@@ -118,27 +115,6 @@ export const ContactSection: React.FC = () => {
                   <span className="text-[11px] font-bold text-red-400 uppercase tracking-widest block mb-1">CO-FOUNDER</span>
                   <h4 className="text-xl font-bold text-white">Prasanna</h4>
                   <p className="text-xs text-slate-400 mt-1">Hands for Homeless (HFH)</p>
-                </div>
-              </div>
-
-              {/* Redirect to Google Form in New Tab */}
-              <div className="pt-2">
-                <div className="p-5 rounded-2xl bg-gradient-to-r from-red-950/60 via-slate-950/80 to-slate-950 border border-red-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <div>
-                    <h5 className="font-bold text-white text-sm">Join as a Volunteer</h5>
-                    <p className="text-xs text-slate-300 mt-0.5">
-                      Ready to make a difference? Fill out our official Google Form.
-                    </p>
-                  </div>
-                  <a
-                    href="https://forms.gle/AwdwARnoahwfyHgS6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center space-x-2 px-5 py-3 rounded-xl bg-red-600 hover:bg-red-500 text-white font-bold text-xs uppercase tracking-wider transition-all shrink-0 shadow-lg shadow-red-950/50 hover:scale-[1.02]"
-                  >
-                    <span>Open Registration Form</span>
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
                 </div>
               </div>
             </div>
